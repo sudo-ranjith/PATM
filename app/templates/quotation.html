@@ -1,0 +1,72 @@
+<!-- quotation page -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quotation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <!-- company name field -->
+        <label for="company_name">Company Name</label>
+        <input type="text" name="company_name" id="company_name" placeholder="Company Name">
+        <!-- company address field -->
+        <label for="company_address">Company Address</label>
+        <input type="text" name="company_address" id="company_address" placeholder="Company Address">
+        <!-- company contact field -->
+        <label for="company_contact">Company Contact</label>
+        <input type="text" name="company_contact" id="company_contact" placeholder="Company Contact">
+        <!-- company email field -->
+        <label for="company_email">Company Email</label>
+        <input type="text" name="company_email" id="company_email" placeholder="Company Email">
+        <!-- GSTIN -->
+        <label for="GSTIN">GSTIN</label>
+        <input type="text" name="GSTIN" id="GSTIN" placeholder="GSTIN">
+        <!-- quotation number -->
+        <label for="quotation_number">Quotation Number</label>
+        <input type="text" name="quotation_number" id="quotation_number" placeholder="Quotation Number">    
+        <!-- date -->
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+
+        <!-- upload image  -->
+        <label for="image">Upload Image</label>
+        <input type="file" name="image" id="image">
+        
+
+        <!-- create table sno, Description, HSN code, GST%, QTY, Rate, UOM and Total Amuont -->
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Description</th>
+                <th>HSN Code</th>
+                <th>GST %</th>
+                <th>QTY</th>
+                <th>Rate</th>
+                <th>UOM</th>
+                <th>Total Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="description" placeholder="Description"></td>
+                <td><input type="text" name="HSN_code" placeholder="HSN Code"></td>
+                <td><input type="text" name="GST_percentage" placeholder="GST %"></td>
+                <td><input type="text" name="quantity" placeholder="QTY"></td>
+                <td><input type="text" name="rate" placeholder="Rate"></td>
+                <td><input type="text" name="UOM" placeholder="UOM"></td>
+                <td><input type="text" name="total_amount" placeholder="Total Amount"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" name="description" placeholder="Description"></td>
+                <td><input type="text" name="HSN_code" placeholder="HSN Code"></td>
+                <td><input type="text" name="GST_percentage" placeholder="GST %"></td>
+                <td><input type="text" name="quantity" placeholder="QTY"></td>
+                <td><input type="text" name="rate" placeholder="Rate"></td>
+                <td><input type="text" name="UOM" placeholder="UOM"></td>
+                <td><input type="text" name="total_amount" placeholder="Total Amount"></td>
+            </tr>
+           
+    </form>
+</body>
+</html>

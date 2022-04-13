@@ -1,0 +1,43 @@
+company_nameBHARATH AGENCIES
+
+phone_noNO:04,Ground floor,1ST STREET,M G PUDHUR, TIRUPUR-641604, Ph.No:9791783478
+
+gst_noGSTIN:33AMAPA6456E3Z)
+
+customer_name 
+
+Customer Code & Name: 17269 & MANOJ KUMAR
+
+bill_noBillNo PPAY01003336
+
+bill_dateBill Date: 03/01/22
+
+description 
+
+Sino
+
+Batch
+
+ 
+
+ 
+
+ 
+
+Description & Packing Exp _ Qty _ Rate Total
+
+I LABETALOL oce | MT212576 07/23 iS 4.10 246.00
+2 AMLODIPINE 2.5MG TAY AC 103 05/23 ys 0.80 16.00
+3 ALPRAZOLAM 0.5MG TAM \ 12107166 06/23 0.70 14.00
+4 ATORVASTATIN 20MG ty mt203565 05/23 1.10 22.00
+5 ENALAPRIL SMG TARY ELRT-1006 07/23 15.00
+
+<4 0.50
+
+total_amount_in_words 
+
+Total Invoice Amount
+Rupees Three Hundred And Thirteen Only
+
+net_amountNET AMOUNT : 313.00
+

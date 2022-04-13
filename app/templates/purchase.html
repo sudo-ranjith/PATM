@@ -1,0 +1,68 @@
+<!-- create a web page for goods purchase request-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Purchase Request</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Purchase Request</h1>
+        </div>
+        
+        <div class="content">
+            <form action="purchase.php" method="post">
+                <table>
+                    <!-- request number -->
+                    <tr>
+                        <td>Request Number:</td>
+                        <td><input type="text" name="request_number" value="001" readonly></td>
+                    <tr>
+                        <td>Item Name:</td>
+                        <td><input type="text" name="item_name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input type="number" name="quantity" required></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                        <td><input type="dropdown" name="price" required></td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td><textarea name="description" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Requested By:</td>
+                        <td><input type="text" name="requested_by" placeholder="get it from the login user" required></td>
+                    </tr>
+                    <tr>
+                        <td>Requested Date:</td>
+                        <td><input type="date" name="requested_date" required></td>
+                    </tr>
+                    
+                    <!-- priority field -->
+                    <tr>
+                        <td>Priority:</td>
+                        <td>
+                            <select name="priority">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    <!-- add remarks field -->
+                    <tr>
+                        <td>Remarks:</td>
+                        <td><textarea name="remarks" required></textarea></td>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="submit" value="Submit"></td>
+                    </tr>
+                    
+                </table>
+            </form> 
