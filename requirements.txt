@@ -82,7 +82,6 @@ python-dateutil==2.8.1
 python-dotenv==0.17.0
 python-stdnum==1.17
 python-youtube==0.8.2
-pytz==2019.3
 PyWavelets==1.1.1
 PyYAML==5.4.1
 redis==3.5.3
