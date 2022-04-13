@@ -22,7 +22,6 @@ docker==5.0.0
 docker-compose==1.29.1
 dockerpty==0.4.1
 docopt==0.6.2
-erpnext==14.0.0.dev0
 filelock==3.6.0
 Flask==1.0.2
 Flask-Bcrypt==0.7.1
