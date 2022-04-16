@@ -108,7 +108,7 @@ def index():
         files = request.files.getlist("file")
         for f in files:
             img_file_path = os.path.join(img_path, f.filename)
-            app.config["img_file_path"] = img_file_path
+            # app.config["img_file_path"] = img_file_path
             f.save(img_file_path)
         for (dirpath, dirnames, filenames) in os.walk(img_path):
             files = filenames
@@ -176,7 +176,7 @@ def next():
     # print app.config["LABELS"] as pretty
     print(app.config["LABELS"])
     to_insert = {}
-    to_insert["image"] = app.config["FILES"]
+    to_insert["image"] = app.config["FILES"][0]
     to_insert["labels"] = app.config["LABELS"]
 
     # check already exists image in db or not
@@ -221,6 +221,10 @@ def view():
     print(result)
     return json.dumps({"result": result["data"]}, default=str)
  
+@app.route('/extract')
+def extract_im():
+     return render_template('extract.html')
+
 # select data based on field image from db
 @app.route('/get_image/<image>')
 def get_image(image):
@@ -229,6 +233,7 @@ def get_image(image):
 
 @app.route('/fetch_image', methods=["POST"])
 def fetch_image():
+    print(f"request.method : {request.method}")
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No files selected')
@@ -241,14 +246,16 @@ def fetch_image():
         files = request.files.getlist("file")
         for f in files:
             img_file_path = os.path.join(img_path, f.filename)
-            app.config["img_file_path"] = img_file_path
             f.save(img_file_path)
-
     file_name = request.files['file']
-    file_co_ords = img_db.read_data({"image":file_name.filename})
+    print(f"file_name.filename : {file_name.filename}")
+    file_co_ords = img_db.read_data({"image":f"{file_name.filename}"})
     if file_co_ords["exists"]:
+        print(file_co_ords)
         res = get_image_text(img_file_path, file_co_ords["data"]["labels"])
-        return jsonify(res)
+        # insert into extract collection
+        img_db.insert_extracted_data(res)
+        return json.dumps(res, default=str)
     
     print("it is not wokring good")
     return jsonify({"result": "something went wrong"})

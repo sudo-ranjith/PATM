@@ -14,6 +14,17 @@ class RegisterCurb:
     def __init__(self):
         # assigning collection name here
         self.img_db_col = mongo.db.img_db
+        self.extract_db_col = mongo.db.extracted_data
+
+    def insert_extracted_data(self, query):
+        try:
+            registered_email = self.extract_db_col.insert_one(query)
+      
+        except Exception as e:
+            more_info = "Unable to Inserted data : Exception occurred - " + traceback.format_exc()
+            return common_helpers.response('failed',
+                                           app.config["FAILURE_MESSAGE_500"],
+                                           more_info, [], 500)
 
     def insert_data(self, query):
         try:
@@ -27,6 +38,7 @@ class RegisterCurb:
 
     def read_data(self, query):
         try:
+            print(f"read data query is: {query}")
             result_data = self.img_db_col.find_one(query)
             print(result_data)
             if result_data:

@@ -1,0 +1,457 @@
+vendor_addressNO:04,Ground floor,1ST STREET.M G PUDHUR, TIRUPUR-64 1604,
+
+vendor_nameBHARATH AGENCIES
+
+vendor_dl_no 
+
+vendor_gst_noGSTIN:33AMAPA6456E3ZI
+
+raw_customer_name_and_code 
+
+Customer Code & Name: 17269 & MANOJ KUMAR
+
+bill_noBill No PPAY01003336
+
+bill_dateBill 03/01/22
+
+ 
+
+ 
+
+doctor_name| Dr: VIDHY AKAR - PSG HOSP - CBE
+
+raw_description 
+
+Sino
+
+ 
+
+Description & Packing Batch Exp _ Qty _ Rate Total
+
+I LABETALOL oce | MT212576 07/23 iS 4.10 246.00
+2 AMLODIPINE 2.5MG TAY AOE-2103 05/23 ys 0.80 16.00
+3 ALPRAZOLAM 0.5MG TAM \ 12107166 06/23 0.70 14.00
+4 ATORVASTATIN 20MG ty mt203565 05/23 1.10 22.00
+5 ENALAPRIL 5MG 1 AY ELRT-1006 07/23 15.00
+
+ 
+
+<4 0.50
+
+ 
+
+total_amountTotal i : 313.00
+
+net_amountNET AMOUNT : 313.00
+
+working_hours(0 A.M to 8.00 P.M
+
+  
+
+Working hours frot
+
+sales_rep_codeSales Rep Code: 3
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_name,Ground floor, 1ST STREET.M G PUDHUR,TIRUPL
+)L.NO: 10-00829-20,21
+& MANOJ KUMAR
+
+   
+
+ 
+
+address 
+
+ee er eee aa ee eens
+
+1 LABETALOL oce | MT212576
+2 AMLODIPINE 2.5MG TAY AOE-2103
+
+gst_noAOE-2103
+
+bill_no
+bil_type
+bill_date 
+   
+
+hree Hundred And
+
+bill_timeTot
+Sales Rep Code: 3
+
+vehicle_noER tes. LOD
+
+Sgst Tax: 16.77
+LO All 60) NE
+TS CU Total Tax : 33.54
+
+ 
+
+raw_description    
+
+from 9.30 A.M to 8.00 P.M PRADHAN MAI
+
+ 
+
+company_nameSHANTHI
+
+Secial Services
+
+addressTRICHY ROAD, COIMBATORE-641005
+Off. Ph: 0422-2205500, 2592425 GSTIN : 33AACTS6602A1Z2
+
+gst_noGSTIN : 33AACTS6602A1z2
+
+bill_noBILNo: = 63442955
+
+bil_typeBill Type : Cash
+
+bill_dateBill Date: (3/04/2022
+
+bill_timeTime: 16:27:28
+
+vehicle_noVehicle: = JN42AJ6719
+
+raw_descriptionPRODUCT QTY RATE VALUE
+
+High Speed Diesel 8.690 99.53 $64.92
+
+total_amountTOTAL Rs: 864.92
+
+company_nameSHANTHI
+
+Secial Services
+
+addressTRICHY ROAD, COIMBATORE-641005
+Off. Ph: 0422-2205500, 2592425 GSTIN : 33AACTS6602A1Z2
+
+gst_noGSTIN : 33AACTS6602A1z2
+
+bill_noBILNo: = 63442955
+
+bil_typeBill Type : Cash
+
+bill_dateBill Date: (3/04/2022
+
+bill_timeTime: 16:27:28
+
+vehicle_noVehicle: = JN42AJ6719
+
+raw_descriptionPRODUCT QTY RATE VALUE
+
+High Speed Diesel 8.690 99.53 $64.92
+
+total_amountTOTAL Rs: 864.92
+
+company_nameSHANTHI
+
+Secial Services
+
+addressTRICHY ROAD, COIMBATORE-641005
+Off. Ph: 0422-2205500, 2592425 GSTIN : 33AACTS6602A1Z2
+
+gst_noGSTIN : 33AACTS6602A1z2
+
+bill_noBILNo: = 63442955
+
+bil_typeBill Type : Cash
+
+bill_dateBill Date: (3/04/2022
+
+bill_timeTime: 16:27:28
+
+vehicle_noVehicle: = JN42AJ6719
+
+raw_descriptionPRODUCT QTY RATE VALUE
+
+High Speed Diesel 8.690 99.53 $64.92
+
+total_amountTOTAL Rs: 864.92
+

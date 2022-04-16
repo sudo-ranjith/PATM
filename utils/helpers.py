@@ -24,26 +24,25 @@ output_file = "output.txt"
 def get_image_text(image_path, img_config):
     func_resp = {}
     res_data = []
+    print(f"image_path : {image_path}")
     try:
-        # read images from input dir
-        for filename in os.listdir(input_dir):
-            # read image
-            img = cv2.imread(os.path.join(input_dir, filename))
+        # read image
+        img = cv2.imread(image_path)
 
-            # fetch text from image from the given region X1, Y1, X2, Y2
-            # X1, Y1, X2, Y2 are the coordinates of the region
-            # X1, Y1 are the top left corner
-            # X2, Y2 are the bottom right corner
+        # fetch text from image from the given region X1, Y1, X2, Y2
+        # X1, Y1, X2, Y2 are the coordinates of the region
+        # X1, Y1 are the top left corner
+        # X2, Y2 are the bottom right corner
 
-            for points_dict in img_config:
-                one_data = {}
-                x1, y1, x2, y2 = int(points_dict["xMin"]), int(points_dict["yMin"]), int(points_dict["xMax"]), int(points_dict["yMax"])
-                roi = img[y1:y2, x1:x2]
-                # write the text in a file
-                with open(os.path.join(output_dir, output_file), "a") as f:
-                    f.write(f"{points_dict['name']}" + pytesseract.image_to_string(roi, lang='eng') + "\n")
-                one_data[points_dict['name']] = pytesseract.image_to_string(roi, lang='eng').strip()
-                res_data.append(one_data)
+        for points_dict in img_config:
+            one_data = {}
+            x1, y1, x2, y2 = int(points_dict["xMin"]), int(points_dict["yMin"]), int(points_dict["xMax"]), int(points_dict["yMax"])
+            roi = img[y1:y2, x1:x2]
+            # write the text in a file
+            with open(os.path.join(output_dir, output_file), "a") as f:
+                f.write(f"{points_dict['name']}" + pytesseract.image_to_string(roi, lang='eng') + "\n")
+            one_data[points_dict['name']] = pytesseract.image_to_string(roi, lang='eng').strip()
+            res_data.append(one_data)
     except Exception as e:
         func_resp["message"] = traceback.format_exc()
         func_resp["status"] = "failure"
