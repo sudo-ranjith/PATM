@@ -55,7 +55,8 @@ class DevelopmentConfig(BaseConfig):
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     MONGO_DB = 'TNFRS'
-    MONGO_URI = 'mongodb+srv://8344449313:8344449313@cluster0.8rzwx.mongodb.net'
+    # MONGO_URI = 'mongodb://8344449313:8344449313@cluster0.8rzwx.mongodb.net/patm'
+    MONGO_URI = "mongodb+srv://8344449313:8344449313@cluster0.8rzwx.mongodb.net/patm?retryWrites=true&w=majority"
     SECRET_KEY = 'a5ea0c77491f965420dfa379ddb6105adb0e3e88'
     JWT_SECRET_KEY = 'super-secret'
 

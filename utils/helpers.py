@@ -35,16 +35,14 @@ def get_image_text(image_path, img_config):
             # X1, Y1 are the top left corner
             # X2, Y2 are the bottom right corner
 
-            for points in img_config:
+            for points_dict in img_config:
                 one_data = {}
-                print(f"points: {img_config[points]}")
-                co_ords = img_config[points].split(",")
-                x1, y1, x2, y2 = int(co_ords[0]), int(co_ords[1]), int(co_ords[2]), int(co_ords[3])
+                x1, y1, x2, y2 = int(points_dict["xMin"]), int(points_dict["yMin"]), int(points_dict["xMax"]), int(points_dict["yMax"])
                 roi = img[y1:y2, x1:x2]
                 # write the text in a file
                 with open(os.path.join(output_dir, output_file), "a") as f:
-                    f.write(f"{points}" + pytesseract.image_to_string(roi, lang='eng') + "\n")
-                one_data[points] = pytesseract.image_to_string(roi, lang='eng')
+                    f.write(f"{points_dict['name']}" + pytesseract.image_to_string(roi, lang='eng') + "\n")
+                one_data[points_dict['name']] = pytesseract.image_to_string(roi, lang='eng').strip()
                 res_data.append(one_data)
     except Exception as e:
         func_resp["message"] = traceback.format_exc()

@@ -1,3 +1,6 @@
+from crypt import methods
+from email.policy import default
+import json
 from app import transport_agent
 from flask import Flask, Blueprint, jsonify, make_response, render_template
 from flask_restplus import Api
@@ -73,10 +76,13 @@ import os
 import shutil
 
 
-from flask import Flask, redirect, url_for, request, flash
+from flask import Flask, redirect, url_for, request, flash, jsonify
 from flask import render_template
 from flask import send_file
+from app.main_model import RegisterCurb
+from utils.helpers import get_image_text
 
+img_db = RegisterCurb()
 img_path = os.path.join(os.getcwd(), 'images')
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -101,7 +107,9 @@ def index():
         os.mkdir(img_path)
         files = request.files.getlist("file")
         for f in files:
-            f.save(os.path.join(img_path, f.filename))
+            img_file_path = os.path.join(img_path, f.filename)
+            app.config["img_file_path"] = img_file_path
+            f.save(img_file_path)
         for (dirpath, dirnames, filenames) in os.walk(img_path):
             files = filenames
             break
@@ -144,7 +152,7 @@ def add(id):
     xMax = request.args.get("xMax")
     yMin = request.args.get("yMin")
     yMax = request.args.get("yMax")
-    app.config["LABELS"].append({"id":id, "name":"", "xMin":xMin, "xMax":xMax, "yMin":yMin, "yMax":yMax, "image": app.config["FILES"]})
+    app.config["LABELS"].append({"id":id, "name":"", "xMin":xMin, "xMax":xMax, "yMin":yMin, "yMax":yMax})
     return redirect(url_for('tagger'))
 
 @app.route('/remove/<id>')
@@ -161,12 +169,23 @@ def next():
     """
     in this api we are getting the selected image points
     """
-    print(f"**** 7")
+    print(f"**** 7 app.config type : {type(app.config)} {app.config} ")
+    print("***************")
     image = app.config["FILES"][app.config["HEAD"]]
     app.config["HEAD"] = app.config["HEAD"] + 1
     # print app.config["LABELS"] as pretty
-    print("***************")
     print(app.config["LABELS"])
+    to_insert = {}
+    to_insert["image"] = app.config["FILES"]
+    to_insert["labels"] = app.config["LABELS"]
+
+    # check already exists image in db or not
+    if img_db.read_data({"image":image})["exists"]:
+        print(f"it is going to update the data {image}")
+        img_db.find_modify({"image":image}, {"$set":to_insert})
+    else:
+        print(f"it is going to insert the data {image}")
+        img_db.insert_data(to_insert)
     print("***************")
     with open(app.config["OUT"],'a') as f:
         for label in app.config["LABELS"]:
@@ -195,7 +214,44 @@ def download():
                      attachment_filename='final.zip',
                      as_attachment=True)
 
+@app.route('/view')
+def view():
+    result = img_db.read_all_data()
+    print("+++++++++++++++++")
+    print(result)
+    return json.dumps({"result": result["data"]}, default=str)
+ 
+# select data based on field image from db
+@app.route('/get_image/<image>')
+def get_image(image):
+    print("it is wokring good")
+    return json.dumps({"result": img_db.read_data({"image":image})["data"]}, default=str)
 
+@app.route('/fetch_image', methods=["POST"])
+def fetch_image():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No files selected')
+            return redirect('/')
+        try:
+            shutil.rmtree(img_path)
+        except:
+            pass
+        os.mkdir(img_path)
+        files = request.files.getlist("file")
+        for f in files:
+            img_file_path = os.path.join(img_path, f.filename)
+            app.config["img_file_path"] = img_file_path
+            f.save(img_file_path)
+
+    file_name = request.files['file']
+    file_co_ords = img_db.read_data({"image":file_name.filename})
+    if file_co_ords["exists"]:
+        res = get_image_text(img_file_path, file_co_ords["data"]["labels"])
+        return jsonify(res)
+    
+    print("it is not wokring good")
+    return jsonify({"result": "something went wrong"})
 
 @app.route('/about')
 @calculate_proc_time
